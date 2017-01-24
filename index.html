@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	<title>Document</title>
+	<style>
+		#wrapper{
+			width: 300px;
+			height: 200px;
+			overflow: hidden;
+		}
+		img{
+			/*width: 150%;*/
+		}
+	</style>
+</head>
+<body>
+	<div id="wrapper">
+		<img src="img/hb1.png" alt="" id='indicator'>
+	</div>
+	<script src="http://cdn.bootcss.com/iScroll/5.2.0/iscroll-zoom.min.js"></script>
+	<script src='js/jquery-2.1.4.min.js'></script>
+	<script>
+		
+		document.addEventListener('touchmove', function (e){
+
+  e.preventDefault(); 
+}, false);
+		var myScroll = new IScroll('#wrapper', {
+		    scrollX: true, 
+		    freeScroll: true,
+		    zoom:true,
+		    wheelAction:'zoom',
+		    mouseWheel:true,
+		    tap:true,
+		    // eventPassthrough:true,
+		});
+	</script>
+</body>
+</html>
